@@ -13,7 +13,7 @@ int main() {
     float densidadePopulacional1 = populacao1 / area1;
     float pibPerCapita1 = pib1 / populacao1;
 
-    // Carta 2: Curitiba
+    // Carta 2: Paraná
     char estado2[] = "B"; 
     char codigo2[] = "B02"; 
     char nomeCidade2[] = "Curitiba"; 
