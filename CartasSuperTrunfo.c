@@ -2,44 +2,52 @@
 
 int main() {
     // Carta 1: Brasília
-    char estado1[] = "A"; // Letra escolhida com finalidade de desenvolver sequência
-    char codigo1[] = "A01"; // código escolhido com finalidade de desenvolver sequência
-    char nomeCidade1[] = "Brasília"; // Cidade de uma palavra, para facilicitar o código
-    int populacao1 = 3094325; // dados populacionais
-    float area1 = 5802.00; // área territorial
-    float pib1 = 289.6; // pib n°1
-    int pontosTuristicos1 = 25; // número de pontos turísticos
+    char estado1[] = "A";//Letra para criar sequência
+    char codigo1[] = "A01";// código para criar sequência
+    char nomeCidade1[] = "Brasília";// cidade escolhida por ter apenas 1 nome
+    int populacao1 = 3094325; 
+    float area1 = 5802.00;// em km²
+    float pib1 = 2179000000000.0; // PIB em reais
+    int pontosTuristicos1 = 25; 
 
-    // Carta 2: Paraná
-    char estado2[] = "B"; // Letra escolhida com finalidade de continuar sequência
-    char codigo2[] = "B02"; // código escolhido com finalidade de continuar sequência
-    char nomeCidade2[] = "Curitiba"; // Cidade de uma palavra, para facilicitar o código
-    int populacao2 = 1963726; // dados populacionais
-    float area2 = 434.89; // área territorial
-    float pib2 = 103.7; // pib n°1
-    int pontosTuristicos2 = 40; // número de pontos turísticos
+    float densidadePopulacional1 = populacao1 / area1;
+    float pibPerCapita1 = pib1 / populacao1;
+
+    // Carta 2: Curitiba
+    char estado2[] = "B"; 
+    char codigo2[] = "B02"; 
+    char nomeCidade2[] = "Curitiba"; 
+    int populacao2 = 1963726; 
+    float area2 = 434.89;// em km²
+    float pib2 = 103700000000.0; // PIB em reais
+    int pontosTuristicos2 = 40; 
+
+    float densidadePopulacional2 = populacao2 / area2;
+    float pibPerCapita2 = pib2 / populacao2;
 
     // Exibição da Carta 1
-    printf("Carta 1:\n"); //saída de dados carta n1
-    printf("Estado: %s\n", estado1); // saída de dados estado 1 (letra)
-    printf("Código: %s\n", codigo1); //saída de dados código da carta 1
-    printf("Nome da Cidade: %s\n", nomeCidade1); // saída de dados com nome da cidade
-    printf("População: %d\n", populacao1); // saída de dados com número da população
-    printf("Área: %.2f km²\n", area1); // saída de dados da área territorial
-    printf("PIB: %.2f bilhões de reais\n", pib1); // saída de dados PIB n1
-    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1); /*saída de dados 
-    com número de pontos turísticos*/
+    printf("\n==== Carta 1 ====\n");
+    printf("Estado: %s\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Cidade: %s\n", nomeCidade1);
+    printf("População: %d habitantes\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: R$ %.2f bilhões\n", pib1 / 1000000000); // dividi para diminuir a quantide de números exibidos transformando em bilhões
+    printf("Pontos turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per capita: R$ %.2f\n", pibPerCapita1);
 
     // Exibição da Carta 2
-    printf("\nCarta 2:\n");//saída de dados carta n1
-    printf("Estado: %s\n", estado2); // saída de dados estado 2 (letra)
-    printf("Código: %s\n", codigo2); //saída de dados código da carta 2
-    printf("Nome da Cidade: %s\n", nomeCidade2); // saída de dados com nome da cidade
-    printf("População: %d\n", populacao2); // saída de dados com número da população
-    printf("Área: %.2f km²\n", area2); // saída de dados da área territorial
-    printf("PIB: %.2f bilhões de reais\n", pib2);  // saída de dados PIB n2
-    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2); /*saída de dados 
-    com número de pontos turísticos*/
+    printf("\n==== Carta 2 ====\n");
+    printf("Estado: %s\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Cidade: %s\n", nomeCidade2);
+    printf("População: %d habitantes\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: R$ %.2f bilhões\n", pib2 / 1000000000);// dividi para diminuir a quantide de números exibidos transformando em bilhões
+    printf("Pontos turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per capita: R$ %.2f\n", pibPerCapita2);
 
     return 0;
 }
